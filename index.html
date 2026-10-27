@@ -5,24 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Ready Recycling</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/GLTFLoader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/OrbitControls.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/EffectComposer.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/RenderPass.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/ShaderPass.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/CopyShader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/MaskPass.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/OutlinePass.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/UnrealBloomPass.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/GLTF2Loader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/DRACOLoader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/FontLoader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/OrbitControls.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/PointerLockControls.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/VRButton.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/VRControls.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/DeviceOrientationControls.js"></script>   
+  <meta name="description" content="Ready Recycling: smart bins that pre-sort and compact waste and alert collectors when they are full.">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
 <header>
   <div class="content-fit">
     <div class="logo">Ready recycling</div>
@@ -91,6 +79,6 @@
   </div>
 </div>
 <div id="container3D"></div>
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 </body>
 </html>   

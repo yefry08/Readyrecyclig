@@ -159,6 +159,30 @@ header .content-fit nav ul {
   z-index: 100;
   pointer-events: none;
 }
+.how .content-fit {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  grid-template-areas: "number number" "des figure";
+  gap: 2em 3em;
+  align-items: start;
+}
+.how .number { grid-area: number; font-size: 5em; }
+.how .des { grid-area: des; }
+.how .figure { grid-area: figure; }
+.section.how .content-fit .title { font-size: 4em; margin-bottom: 0.4em; }
+.steps { counter-reset: step; display: grid; gap: 1.1em; font-size: 1.05em; line-height: 1.6; }
+.steps li { counter-increment: step; position: relative; padding-left: 2.6em; }
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute; left: 0; top: 0;
+  font-family: "devil breeze"; font-weight: bold; color: #d1ff48;
+}
+.steps b { color: #d1ff48; font-weight: 600; }
+.figure-hint { margin-top: 1.5em; opacity: 0.7; font-size: 0.95em; }
+iframe.figure { width: 100%; min-height: 600px; border: 0; background: transparent; color-scheme: dark; }
+@media screen and (max-width: 1023px) {
+  .how .content-fit { grid-template-columns: 1fr; grid-template-areas: "number" "des" "figure"; }
+}
 @media screen and (max-width: 1023px) {
   #banner .title {
     font-size: 5em;

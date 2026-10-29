@@ -51,9 +51,40 @@
   </div>
   <img src="https://assets.codepen.io/453571/leaf1.png" class="decorate" alt="" style="width: 70vw; bottom: 0; right: 0;">
 </div>
-<div class="section" id="contact">
+<div class="section how" id="how">
   <div class="content-fit">
     <div class="number">03</div>
+    <div class="des">
+      <div class="title">How it works</div>
+      <ol class="steps">
+        <li><b>Pre-sort.</b> Each module of the honeycomb takes one kind of waste, and its mouth only fits that kind: a round mouth for bottles, a slot for paper.</li>
+        <li><b>Sense.</b> A distance sensor in the lid measures the fill level, load cells weigh what is inside and a temperature sensor watches for fire.</li>
+        <li><b>Compact.</b> At 85 % the ESP32 drives a 12 V actuator that presses loose bottles down by about 65 %, so each bin holds more than twice as much.</li>
+        <li><b>Alert.</b> When even compacting leaves no room, the bin reports itself full over Wi-Fi, LoRaWAN or 4G, powered by its battery and solar lid.</li>
+      </ol>
+      <p class="figure-hint">Click the bin to drop bottles in, or press C to compact.</p>
+    </div>
+    <iframe class="figure" src="figures/smart-bin.html" title="Interactive cutaway of the Ready Recycling smart bin" loading="lazy"></iframe>
+  </div>
+</div>
+<div class="section how" id="city">
+  <div class="content-fit">
+    <div class="number">04</div>
+    <div class="des">
+      <div class="title">In the city</div>
+      <ol class="steps">
+        <li><b>Bins report.</b> Ready stations on street corners send an alert to the collection centre the moment they are full.</li>
+        <li><b>The app gathers.</b> The collection centre sees every station's level in the Ready app, with alerts as they arrive.</li>
+        <li><b>Smarter routes.</b> The truck drives the shortest route through only the full stations, instead of visiting every bin on a fixed schedule.</li>
+      </ol>
+      <p class="figure-hint">Click any station to fill it and watch the truck plan its route.</p>
+    </div>
+    <iframe class="figure" src="figures/city.html" title="Interactive model of Ready Recycling in a city neighbourhood" loading="lazy"></iframe>
+  </div>
+</div>
+<div class="section" id="contact">
+  <div class="content-fit">
+    <div class="number">05</div>
     <div class="des">
       <div class="title">CONTACT</div>
       <table>
@@ -79,6 +110,20 @@
   </div>
 </div>
 <div id="container3D"></div>
+<script>
+  // Size each figure frame to its page, and let the site's background show through.
+  document.querySelectorAll("iframe.figure").forEach((frame) => {
+    frame.addEventListener("load", () => {
+      const doc = frame.contentDocument;
+      if (!doc) return;
+      doc.documentElement.style.background = "transparent";
+      doc.body.style.background = "transparent";
+      const fit = () => (frame.style.height = doc.documentElement.scrollHeight + "px");
+      new ResizeObserver(fit).observe(doc.body);
+      fit();
+    });
+  });
+</script>
 <script type="module" src="script.js"></script>
 </body>
 </html>   

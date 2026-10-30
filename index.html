@@ -116,6 +116,15 @@
     frame.addEventListener("load", () => {
       const doc = frame.contentDocument;
       if (!doc) return;
+      // GitHub Pages sometimes answers with a temporary error page: try again a few times.
+      if (!doc.querySelector(".iso-plate")) {
+        const tries = Number(frame.dataset.tries || 0);
+        if (tries < 3) {
+          frame.dataset.tries = String(tries + 1);
+          setTimeout(() => (frame.src = frame.getAttribute("src").split("?")[0] + "?retry=" + (tries + 1)), 1500 * (tries + 1));
+        }
+        return;
+      }
       doc.documentElement.style.background = "transparent";
       doc.body.style.background = "transparent";
       const fit = () => (frame.style.height = doc.documentElement.scrollHeight + "px");

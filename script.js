@@ -156,8 +156,8 @@ const poses = {
   banner: { position: { x: 0.35, y: -0.2, z: 0 }, rotation: { x: 0.15, y: -0.6, z: 0 } },
   intro: { position: { x: -0.85, y: -0.55, z: -2 }, rotation: { x: 0.35, y: -0.5, z: 0.1 } },
   description: { position: { x: 0.85, y: -0.1, z: -2 }, rotation: { x: 0.2, y: -2.6, z: -0.1 } },
-  how: { position: { x: 0.35, y: 0.78, my: 1.0, z: -2 }, rotation: { x: 0.25, y: 0.5, z: 0 } },
-  city: { position: { x: 0.6, y: 0.78, my: 1.0, z: -2 }, rotation: { x: 0.3, y: -2.5, z: 0 } },
+  how: { position: { x: -0.8, y: -0.62, my: 1.0, z: -2 }, rotation: { x: 0.25, y: 0.5, z: 0 } },
+  city: { position: { x: -0.8, y: -0.62, my: 1.0, z: -2 }, rotation: { x: 0.3, y: -2.5, z: 0 } },
   contact: { position: { x: -0.75, y: 0.3, z: 0 }, rotation: { x: 0.3, y: -0.4, z: 0 } },
 };
 let target = poses.banner;
